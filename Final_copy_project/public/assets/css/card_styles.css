@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap');
+/* 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+} */
+
+
+#card-centering{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-wrapper{
+  background: whitesmoke;
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-card{
+  border: 0px;
+  border-radius: 10px;
+  background: #BDD1DB;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 2px 2px 6px black;
+  transition: .3s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-card::after{
+  content: '';
+  background: rgba(60,60,60,0.7);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 137%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: .3s ease-in-out .35s;
+  
+}
+
+.card-content{
+  color: white;
+  position: absolute;
+  top: 90%;
+  padding: 0 25px;
+  transition: .3s cubic-bezier(.33,1.99,.61,1.96) .35s;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content h3{
+  margin-bottom: 10px;
+  align-self: start;
+}
+
+.card-content::after{
+  content: '';
+  background: dodgerblue;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  top: 22%;
+  transition: .3s linear;
+  left: 8%;
+}
+
+.card-content button{
+  padding: 10px 35px;
+  border-radius: 20px;
+  border: 0;
+  margin-top: 15px;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+  transition: .3s linear;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-content button::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: dodgerblue;
+  clip-path: circle(0.5% at 0 0);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: .3s linear;
+}
+
+.card-sign{
+  width: 150px;
+  height: 150px;
+  background: trasparent;
+  border-radius: 25%;
+  border: 4px solid dodgerblue;
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.card-card:hover .content{
+  top: 55%;
+}
+
+.card-card:hover::after{
+  top: 50%;
+}
+
+.card-card:hover .content::after{
+  width: 80%;
+}
+
+.card-content button:hover::after{
+  clip-path: circle(140.9% at 0 0);
+}
+.card-content button:hover{
+  color: white;
+}
